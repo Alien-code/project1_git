@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container text-center">
+        <div class="jumbotron">
+            <h1>{{school.name}}</h1><br>
+            <h5>Email: {{school.email}}</h5><br>
+            <h5>Phone: {{school.phone}}</h5><br>
+            <h5>District: {{school.district}}</h5><br>
+            <h5>Address: {{school.address}}</h5><br>
+            <h5>Established: {{school.stablished_date}}</h5><br>
+
+        </div>
+    </div>
+{% endblock %}

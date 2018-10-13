@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for list in school_list %}
+              <h5><a href="{% url 'school-details' list.pk %}">{{list.pk}}.{{list}}</a> </h5>
+         {% endfor %}
+{% endblock %}

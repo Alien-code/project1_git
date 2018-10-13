@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="text-center">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th >ID</th>
+                        <th >NAME</th>
+                        <th >AGE</th>
+                        <th >GENDER</th>
+                        <th >GUARDIAN</th>
+                        <th >RELATION</th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                {% for std in std_list %}
+                    <tr>
+                        <td >{{std.pk}}</td>
+                        <td >{{std.name}}</td>
+                        <td >{{std.age}}</td>
+                        <td >{{std.gender}}</td>
+                        <td ><a href="{% url 'guardian-details' std.pk %}">{{std.guard}}</a></td>
+                        <td >{{std.guard.relation}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+    </div>
+
+{% endblock %}
